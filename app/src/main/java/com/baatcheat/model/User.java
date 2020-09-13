@@ -3,7 +3,6 @@ package com.baatcheat.model;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -105,12 +104,7 @@ public class User {
     }
 
     public boolean compare(User u){
-        if(this.userName.equals(u.getUserName())){
-            if(this.email.equals(u.getEmail())){
-                return true;
-            }
-        }
-        return false;
+        return this.userID.equals(u.getUserID());
     }
 
     public User(Map<String, Object> data) {

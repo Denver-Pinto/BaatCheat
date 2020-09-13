@@ -9,7 +9,7 @@ import androidx.cardview.widget.CardView;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -50,6 +50,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Set;
 
+import static android.graphics.Color.WHITE;
 import static com.baatcheat.Homepage.currentUser;
 import static com.baatcheat.Homepage.currentUserId;
 
@@ -248,12 +249,9 @@ public class BuildProfile extends AppCompatActivity {
                         cardNameToCard.remove(i);
                         cardNameToCard.put(i,cardToReplaceStorage);
 
-                        //coloring this card
-                        Random rnd = new Random();
-                        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                        //Both themes are exactly same, so warning doesn't matter.
                         //this card is visible!
-                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(color);
-
+                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(getResources().getColor(R.color.color_surface));
 
                         visibleCards.put(i,cardNameToCard.get(i));
                         Log.d("MAIN3",i+"is visible");
@@ -266,7 +264,6 @@ public class BuildProfile extends AppCompatActivity {
                         cardToReplaceStorage.setVisible(false);
                         cardNameToCard.remove(i);
                         cardNameToCard.put(i,cardToReplaceStorage);
-
 
                         //making grey in color
                         Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(0x7B000000);

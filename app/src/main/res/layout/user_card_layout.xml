@@ -29,11 +29,11 @@
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>-->
+
 <androidx.cardview.widget.CardView android:layout_gravity="center"
     android:layout_width="fill_parent"
     android:layout_height="80dp"
     card_view:cardCornerRadius="2dp"
-    layout_height=""
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
@@ -45,15 +45,13 @@
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="User"
+            android:text="@string/user"
+            android:textColor="@color/normal_white"
             android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:textSize="35dp"/>
-
-
+            android:textSize="35sp"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

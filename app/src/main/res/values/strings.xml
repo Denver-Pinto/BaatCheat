@@ -78,4 +78,7 @@
     <string name="update">Update</string>
     <string name="ar_location">AR Location</string>
     <string name="delete_my_account">Delete My Account</string>
+    <string name="make_invisible">make Invisible</string>
+    <string name="user">User</string>
+    <string name="topic">Topic</string>
 </resources>

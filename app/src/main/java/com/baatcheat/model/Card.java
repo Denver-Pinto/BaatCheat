@@ -79,15 +79,11 @@ public class Card {
         tr.setId(idForThisRow);
         //1st value to return
         BuildProfile.cardNameToTableRow.put(this.cardName,tr);
-        //random color:
-        if(this.visible) {
-            Random rnd = new Random();
-            int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-            c.setCardBackgroundColor(color);
-        }
-        else {
+        if(this.visible)
+            c.setCardBackgroundColor(Color.rgb(3, 218, 198));
+        else
             c.setCardBackgroundColor(0x7B000000);
-        }
+
         c.layout(5,TableRow.LayoutParams.MATCH_PARENT,5,TableRow.LayoutParams.MATCH_PARENT);
 
         TextView txt=new TextView(context);
@@ -98,7 +94,7 @@ public class Card {
         CheckBox checkBox=new CheckBox(context);
         LinearLayout.LayoutParams parms = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,60);
         checkBox.setLayoutParams(parms);
-        checkBox.setText("make Invisible");
+        checkBox.setText(R.string.make_invisible);
         int generatedId=View.generateViewId();
         checkBox.setId(generatedId);
         checkBox.setChecked(!this.visible);
