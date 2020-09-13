@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/recommendation_menu"
+        android:icon="@drawable/ic_people"
+        android:title="@string/recommendations"
+        app:labelVisibilityMode="selected"/>
+
+    <item
+        android:id="@+id/interest_search_menu"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/interest_search"
+        app:labelVisibilityMode="unlabeled"/>
+
+    <item
+        android:id="@+id/face_search_menu"
+        android:icon="@drawable/ic_face_scan"
+        android:title="@string/face_search"
+        app:labelVisibilityMode="unlabeled"/>
+
+</menu>

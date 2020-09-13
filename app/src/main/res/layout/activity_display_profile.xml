@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayProfile">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/display_profile_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1">
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/profilePicture"
+                        android:src="@drawable/ic_face_white_24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/display_picture">
+
+                    </ImageView>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/color_on_background"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:id="@+id/nameValue"
+                        android:textSize="35sp"
+                        android:text="@string/name"
+                        android:textIsSelectable="true"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="20sp"
+                        android:text="@string/bio"
+                        android:textIsSelectable="true" />
+                </TableRow>
+
+            </TableLayout>
+            <TextView
+                android:textColor="@color/color_on_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:text="@string/interests"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1"
+                android:id="@+id/tableToShowCards">
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/messageUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_message_white_48dp"
+        app:layout_anchor="@id/display_profile_layout"
+        app:layout_anchorGravity="bottom|end|right"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

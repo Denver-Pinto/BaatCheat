@@ -1,0 +1,114 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Components-->
+
+    <!--Bottom Sheets-->
+    <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MyTheme.BottomSheet.Modal</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
+        <item name="bottomSheetStyle">@style/Widget.MyTheme.BottomSheet.Modal</item>
+        <item name="android:navigationBarColor">?colorPrimary</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">@android:color/transparent</item>
+    </style>
+    <style name="Widget.MyTheme.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">?shapeAppearanceLargeComponent</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Widget.MyApp.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/color_on_primary</item>
+        <item name="backgroundTint">@color/color_primary</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button</item>
+    </style>
+
+    <!-- TextButton -->
+    <style name="Widget.MyApp.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button</item>
+    </style>
+
+    <!-- Chip -->
+    <style name="Widget.MyApp.Chip" parent="Base.Widget.MaterialComponents.Chip">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Chip</item>
+    </style>
+
+    <!-- FAB -->
+    <style name="Widget.MyApp.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.FAB</item>
+    </style>
+
+    <!-- Error TextView -->
+    <style name="Widget.MyApp.TextView.Error" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/color_error</item>
+        <item name="android:textAppearance">@style/TextAppearance.MyTheme.Body1</item>
+    </style>
+
+    <!-- TextInputLayout -->
+    <style name="Widget.MyApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.MyTheme.TextInputLayout.HintText</item>
+        <item name="hintTextColor">@color/color_on_background</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:strokeColor">@color/color_primary</item>
+    </style>
+
+    <!--Messaging -->
+    <!--TextInputLayout-->
+    <style name="Widget.MyApp.TextInputLayout.Messaging" parent="Widget.MyApp.TextInputLayout">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded</item>
+    </style>
+
+    <!-- TextView -->
+    <style name="Widget.MyApp.TextView.Messaging" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/color_on_primary</item>
+=       <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MyTheme.Body1</item>
+    </style>
+
+    <!-- Sent TextView -->
+    <style name="Widget.MyApp.TextView.Messaging.Sent" parent="Widget.MyApp.TextView.Messaging">
+        <item name="android:background">@color/color_secondary</item>
+    </style>
+
+    <!-- Received TextView -->
+    <style name="Widget.MyApp.TextView.Messaging.Received" parent="Widget.MyApp.TextView.Messaging">
+        <item name="android:background">@color/color_primary</item>
+    </style>
+
+    <!-- Hint Text -->
+    <style name="TextAppearance.MyTheme.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <!-- Sent -->
+    <style name="Widget.MyApp.MaterialCardView.Sent" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.Sent</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <!-- Received -->
+    <style name="Widget.MyApp.MaterialCardView.Received" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.Received</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <!--Navigation Drawer-->
+    <style name="Widget.MyTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?textAppearanceBody2</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.NavDrawer</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="Widget.MyApp.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">@style/Base.MyTheme</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+    </style>
+
+    <style name="myDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

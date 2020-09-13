@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/homepage_menu_item"
+            android:icon="@drawable/ic_home_white_48dp"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/messaging_menu_item"
+            android:icon="@drawable/ic_message_white_48dp"
+            android:title="@string/messaging" />
+
+        <item
+            android:id="@+id/settings_menu_item"
+            android:icon="@drawable/ic_settings_white_48dp"
+            android:title="@string/title_activity_settings" />
+
+    </group>
+</menu>

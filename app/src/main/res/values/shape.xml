@@ -1,0 +1,57 @@
+<resources>
+
+  <!--Shape-->
+
+  <!-- Buttons -->
+  <style name="ShapeAppearanceOverlay.MyApp.Button" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">28%</item>
+  </style>
+
+  <!-- Chips -->
+  <style name="ShapeAppearanceOverlay.MyApp.Chip" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">50%</item>
+  </style>
+
+  <!-- Floating Action Button -->
+  <style name="ShapeAppearanceOverlay.MyApp.FAB" parent="">
+    <item name="cornerFamily">cut</item>
+    <item name="cornerSize">48%</item>
+  </style>
+
+  <!-- TextView -->
+  <style name="ShapeAppearanceOverlay.MyApp.TextView" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">12dp</item>
+  </style>
+
+  <!-- Navigation Drawer -->
+  <style name="ShapeAppearanceOverlay.MyApp.NavDrawer" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">14dp</item>
+  </style>
+
+  <!-- Messaging TextInputLayout -->
+  <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">25dp</item>
+  </style>
+
+  <!-- Message Sent TextView -->
+  <style name="ShapeAppearanceOverlay.MyApp.MaterialCardView.Sent" parent="">
+      <item name="cornerFamily">cut</item>
+      <item name="cornerSizeTopLeft">0dp</item>
+      <item name="cornerSizeTopRight">0dp</item>
+      <item name="cornerSizeBottomLeft">30%</item>
+  </style>
+
+  <!-- Message Received TextView -->
+  <style name="ShapeAppearanceOverlay.MyApp.MaterialCardView.Received" parent="">
+    <item name="cornerFamily">cut</item>
+    <item name="cornerSizeTopLeft">10dp</item>
+    <item name="cornerSizeTopRight">0dp</item>
+    <item name="cornerSizeBottomRight">50dp</item>
+  </style>
+
+</resources>

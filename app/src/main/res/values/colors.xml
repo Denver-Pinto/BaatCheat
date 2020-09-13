@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--DARK COLOR THEME-->
+
+<resources>
+    <color name="color_primary">#FF8A65</color>
+    <color name="color_primary_variant">#FF5722</color>
+    <color name="color_secondary">#03dac6</color>
+    <color name="color_secondary_variant">#018786</color>
+
+    <color name="color_background">#121212</color>
+    <color name="color_surface">#212121</color>
+    <color name="color_error">#cf6679</color>
+
+    <color name="color_on_primary">#000000</color>
+    <color name="color_on_secondary">#000000</color>
+    <color name="color_on_background">@color/normal_white</color>
+    <color name="color_on_surface">@color/normal_white</color>
+    <color name="color_on_error">#000000</color>
+
+    <color name="text_input_outline_color">@color/color_on_background</color>
+    <color name="text_input_background_color">#0DFFFFFF</color>
+
+    <color name="normal_white">#DEFFFFFF</color>
+    <color name="subtitle_white">#99FFFFFF</color>
+    <color name="dead_white">#61FFFFFF</color>
+
+
+    <color name="interestTitle">#222222</color>
+</resources>

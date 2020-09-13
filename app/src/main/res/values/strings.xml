@@ -1,0 +1,81 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">BaatCheat</string>
+    <string name="app_logo">App Logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="button_next">Next</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="email">Email</string>
+    <string name="login">Log In</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="resend">Resend</string>
+    <string name="verification_mail_sent">Verification mail sent</string>
+    <string name="change_email">Change Email</string>
+    <string name="proceed">Proceed</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="check_email">Check your email to reset the password</string>
+
+    <string name="email_regex" tools:ignore="TypographyDashes"><![CDATA[(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])]]></string>
+    <string name="password_regex" tools:ignore="TypographyDashes"> <![CDATA[.{8,}]]>  </string>
+
+    <!-- Errors -->
+    <string name="empty_error">Come on bruh</string>
+    <string name="email_error">Invalid Email</string>
+    <string name="email_exists_error">Email already exists</string>
+    <string name="email_not_found_error">You don\'t exist. (In our database)</string>
+    <string name="password_error">Nope. Try hard man, you got this</string>
+    <string name="weak_password_error">Put some work into this</string>
+    <string name="invalid_credentials_error">Them credentials be invalid</string>
+    <string name="verification_sending_error">Could not send email. Please try again</string>
+    <string name="email_verification_error">Email isn\'t verified</string>
+    <string name="unknown_error">Woah dude, you just caused an unknown error</string>
+    <!--Errors End (I wish)-->
+
+    <string name="hello_world">Hello World</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="messaging">Messaging</string>
+    <string name="face_search">Face Search</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="interest_search">Interest Search</string>
+    <string name="display_picture">Display Picture</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="messaging_input_hint">Type something. Go on, you got this</string>
+    <string name="send">Send</string>
+    <string name="arButton">Plot Ar Location</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="google_sign_in">Google Sign In</string>
+    <string name="home">Home</string>
+    <string name="your_profile">Your Profile</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ar">AR</string>
+    <string name="edit_interests">Edit Interests</string>
+    <string name="interests">Interests</string>
+    <string name="no_user_error">Sorry buddy. Looks like your interests are very esoteric</string>
+    <string name="what_do_you_want_to_talk_about">What do you want to talk about?</string>
+    <string name="search_people_nearby">Search People nearby</string>
+    <string name="no_bio">User has no bio. Mysterious</string>
+    <string name="bio">Your Bio</string>
+    <string name="update">Update</string>
+    <string name="ar_location">AR Location</string>
+    <string name="delete_my_account">Delete My Account</string>
+</resources>

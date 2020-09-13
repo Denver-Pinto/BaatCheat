@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InterestSearchFragment">
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            style="@style/Widget.MyApp.TextInputLayout"
+            android:id="@+id/searchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/what_do_you_want_to_talk_about"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.MyTheme.Headline5"
+            android:autofillHints="@string/interests"/>
+
+        <Button
+            android:id="@+id/findPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_people_nearby"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/error_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/no_user_error"
+            android:textAppearance="@style/TextAppearance.MyTheme.Body1"
+            android:textSize="35sp"
+            android:textColor="@color/color_on_background"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/availableUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

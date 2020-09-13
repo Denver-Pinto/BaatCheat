@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/message_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/message_container_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background"
+        android:backgroundTint="@color/color_background"
+        android:foregroundTint="@color/color_background"
+        android:clipChildren="true"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.Sent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/message_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

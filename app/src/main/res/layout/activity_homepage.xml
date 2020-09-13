@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homepage_drawer_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Homepage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/homepage_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            android:elevation="4dp"
+            app:titleTextAppearance="@style/TextAppearance.MyTheme.Body1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_foreground"
+                android:contentDescription="@string/app_logo"
+                android:tint="@color/color_on_primary"
+                android:layout_margin="1dp"
+                android:padding="1dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.MyTheme.Headline4"
+                android:textColor="@color/normal_white"/>
+
+            <ImageButton
+                android:id="@+id/user_profile_picture"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="1dp"
+                android:src="@drawable/ic_face_white_24dp"
+                android:contentDescription="@string/your_profile"
+                android:layout_gravity="end"
+                android:background="@color/color_primary"
+                android:onClick="profileClicked"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <FrameLayout
+            android:id="@+id/homepage_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/homepage_bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/homepage_nav_menu"
+            android:elevation="8dp"
+            style="@style/Widget.MaterialComponents.BottomNavigationView"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view_homepage"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/main_navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

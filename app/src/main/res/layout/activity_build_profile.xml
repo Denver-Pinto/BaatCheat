@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuildProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/build_profile_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/ic_face_white_24dp"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="getUserImage"
+                android:contentDescription="@string/display_picture">
+            </ImageView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="@string/name"
+                style="@style/Widget.MyApp.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEntry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColorHint="@color/color_on_background"
+                    android:textColor="@color/color_on_background"
+                    android:textIsSelectable="true"
+                    android:fontFamily="@font/roboto_condensed_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="@string/bio"
+                style="@style/Widget.MyApp.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bioEntry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/color_on_background"
+                    android:textColor="@color/color_on_background"
+                    android:layout_weight="2"
+                    android:textIsSelectable="true"
+                    android:fontFamily="@font/roboto_condensed_regular"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updateAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="end"
+                style="@style/Widget.MyApp.Button"
+                android:text="@string/update" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/color_on_background"
+                android:layout_height="wrap_content"
+                android:text="@string/interests"
+                style="@style/TextAppearance.MyTheme.Headline4"/>
+            
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1">
+                <TableRow>
+                    <Button
+                        android:id="@+id/cardDeleter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete Card" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/testButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="store cards"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_card_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_add_circle_black_24dp"
+        app:layout_anchor="@id/build_profile_layout"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

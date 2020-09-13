@@ -1,0 +1,9 @@
+/*
+
+Realtime database:
+
+Avoid nesting data - fetch request fetches all the child nodes
+Use persistent storage
+Keep scaling in mind
+
+ */
