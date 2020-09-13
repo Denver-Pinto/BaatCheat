@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Workspace\\unity2018\\Mapbox AR\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ne\\values-ne.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-2\\files-2.1\\07f93703a85b4202e0fd3b191d25173b\\res\\values-ne\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "199,254,312,408,505",
+                        "endColumns": "54,57,95,96,68",
+                        "endOffsets": "253,311,407,504,573"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,114,176,276,377",
+                        "endColumns": "58,61,99,100,72",
+                        "endOffsets": "109,171,271,372,445"
+                    }
+                }
+            ]
+        }
+    ]
+}
