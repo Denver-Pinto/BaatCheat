@@ -3,6 +3,7 @@
 <!--DARK COLOR THEME-->
 
 <resources>
+    <color name="card">#5999ff</color>
     <color name="color_primary">#FF8A65</color>
     <color name="color_primary_variant">#FF5722</color>
     <color name="color_secondary">#03dac6</color>

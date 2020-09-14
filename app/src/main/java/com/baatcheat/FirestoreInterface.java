@@ -41,6 +41,7 @@ import java.util.Set;
 import static com.baatcheat.BuildProfile.adapMap;
 import static com.baatcheat.BuildProfile.cardNameToCard;
 import static com.baatcheat.Homepage.currentUser;
+import static com.baatcheat.Homepage.currentUserId;
 
 class FirestoreInterface {
     private static final String TAG = "FIRESSTOREINTERFACE:";
@@ -192,6 +193,20 @@ class FirestoreInterface {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.w(TAG, "Error writing document", e);
+                    }
+                });
+    }
+//updating user on the database
+    public  void  updateUser(User u){
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .document(u.getUserID())
+                .set(u)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG,"We have updated the User data.");
                     }
                 });
     }

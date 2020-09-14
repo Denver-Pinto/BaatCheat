@@ -154,7 +154,7 @@ public class LoginActivity extends AppCompatActivity
                                             }
                                         });
 
-                                addUserToDatabase(currentUser.getUid(), nameEditText.getText().toString());
+                                addUserToDatabase(currentUser.getUid(), nameEditText.getText().toString(),emailEditText.getText().toString());
 
                                 updateUI(currentUser);
                             }
@@ -206,7 +206,7 @@ public class LoginActivity extends AppCompatActivity
                             if(task.isSuccessful()){
                                 Log.i(TAG, "loginUser -> onComplete: "+email);
                                 FirebaseUser currentUser = authenticator.getCurrentUser();
-                                addUserToDatabase(Objects.requireNonNull(currentUser).getUid(), currentUser.getDisplayName());
+                                addUserToDatabase(Objects.requireNonNull(currentUser).getUid(), currentUser.getDisplayName(),currentUser.getEmail());
                                 updateUI(currentUser);
                             }
                             else{
@@ -247,7 +247,7 @@ public class LoginActivity extends AppCompatActivity
         Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
     }
 
-    private void addUserToDatabase(final String userID, final String name){
+    private void addUserToDatabase(final String userID, final String name,final String email){
 
 
         //FireStore:
@@ -263,7 +263,7 @@ public class LoginActivity extends AppCompatActivity
                         Log.i(TAG, "addUserToDatabase => onComplete: "+"Adding user to FireStore...");
                          new HashMap<>();/*
                         currentUser.put("name", name);*/
-                        User u=new User(name);
+                        User u=new User(name,email);
                         final Map<String, Object> currentUser =u.convertToMap();
                         firestoreUserDatabase.document(userID).set(currentUser)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -47,7 +47,11 @@ public class User {
     }
 
     public User(String userName){
+        this.userName=userName;
+    }
+    public User(String userName,String email){
         this.userName = userName;
+        this.email=email;
     }
 
 
