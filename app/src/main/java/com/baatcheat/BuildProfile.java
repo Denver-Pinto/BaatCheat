@@ -9,7 +9,6 @@ import androidx.cardview.widget.CardView;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -48,10 +47,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Random;
 import java.util.Set;
 
-import static android.graphics.Color.WHITE;
 import static com.baatcheat.Homepage.currentUser;
 import static com.baatcheat.Homepage.currentUserId;
 
@@ -153,19 +150,11 @@ public class BuildProfile extends AppCompatActivity {
 
                 //This just updates the Username and bio, now.
                 //update Entered Fields
-                String name="";
-                String bio="";
-
-                if(!"".equals(nameEntry.getText().toString()))
-                    name = nameEntry.getText().toString();
-
-                if(!"".equals(bioEntry.getText().toString()))
-                    bio = bioEntry.getText().toString();
+                final String name= nameEntry.getText().toString();
+                final String bio= bioEntry.getText().toString();
 
                 currentUser.setUserName(name);
                 currentUser.setBio(bio);
-
-                final String name2 = name;
 
                 FirestoreInterface fs=new FirestoreInterface();
                 fs.updateUser(currentUser);
@@ -189,9 +178,7 @@ public class BuildProfile extends AppCompatActivity {
                 realtimeUserDatabase.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(!dataSnapshot.exists()){
-                            realtimeUserDatabase.child(user.getUid()).child("name").setValue(name2);
-                        }
+                        realtimeUserDatabase.child(user.getUid()).child("name").setValue(name);
                     }
 
                     @Override
@@ -255,7 +242,7 @@ public class BuildProfile extends AppCompatActivity {
 
                         //Both themes are exactly same, so warning doesn't matter.
                         //this card is visible!
-                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(Color.BLUE);
+                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(Color.rgb(3,218,198));
 
                         visibleCards.put(i,cardNameToCard.get(i));
                         Log.d("MAIN3",i+"is visible");
@@ -270,7 +257,7 @@ public class BuildProfile extends AppCompatActivity {
                         cardNameToCard.put(i,cardToReplaceStorage);
 
                         //making grey in color
-                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(Color.BLUE);
+                        Objects.requireNonNull(cardMap.get(i)).setCardBackgroundColor(Color.LTGRAY);
                         Log.d("MAIN3",i+"is invisible");
                     }
                 }
