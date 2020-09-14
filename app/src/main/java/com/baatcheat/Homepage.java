@@ -182,9 +182,11 @@ public class Homepage extends AppCompatActivity
 
                 @Override
                 public void onUserCallback(User retrievedUser) throws IOException {
-                    Log.d(TAG,"WE HAVE GOT OUR CURRENT USER's Updated values");
+                    Log.d(TAG,"WE HAVE GOT OUR CURRENT USER's Updated values"+retrievedUser.toString());
+
                     currentUser=retrievedUser;
                     currentUser.setUserID(currentUserId);
+                    //currentUser.setEmail();
 
                     //putting image back in place if it exists
                     if(currentUser.getUserImageURI()!=null){
@@ -259,6 +261,7 @@ public class Homepage extends AppCompatActivity
             visibility= sf.getBoolean("visibility", false);
         Log.d("SETTINGS VALUE","Current value is "+visibility);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        Log.d(TAG,"Our guy's email is:"+user.getEmail());
         assert user != null;
         return new User(user.getEmail(),user.getDisplayName(),LocationInterface.lastUpdatedLatitude,LocationInterface.lastUpdatedLongitude, new ArrayList<>(Collections.singletonList("")),visibility);
     }
