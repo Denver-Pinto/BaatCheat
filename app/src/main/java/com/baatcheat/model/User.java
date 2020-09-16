@@ -112,6 +112,8 @@ public class User {
     }
 
     public User(Map<String, Object> data) {
+        if(data==null) return;
+
         if(data.get("interests")!=null)
             this.interests = (ArrayList<String>) data.get("interests");
         else

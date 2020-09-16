@@ -243,9 +243,6 @@ public class Homepage extends AppCompatActivity
             case R.id.interest_search_menu:
                 selectedFragment = new InterestSearchFragment();
                 break;
-            case R.id.face_search_menu:
-                selectedFragment = new FaceSearchFragment();
-                break;
         }
 
         if(selectedFragment!=null)
@@ -288,4 +285,10 @@ public class Homepage extends AppCompatActivity
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }

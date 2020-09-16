@@ -55,4 +55,15 @@
 
     </LinearLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scan_face_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_camera_alt_black_24dp"
+        app:layout_anchor="@id/build_profile_layout"
+        app:layout_anchorGravity="bottom|right|end"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

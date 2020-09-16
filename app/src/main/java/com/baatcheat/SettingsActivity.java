@@ -1,5 +1,4 @@
 package com.baatcheat;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +18,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.baatcheat.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -30,12 +27,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 import static com.baatcheat.Homepage.currentUser;
@@ -179,8 +173,6 @@ public class SettingsActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
 
-        Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
-
         String userID = user.getUid();
 
         //FireStore:
@@ -203,12 +195,13 @@ public class SettingsActivity extends AppCompatActivity {
                             try {
                                 File dir = SettingsActivity.this.getCacheDir();
                                 if(!deleteDir(dir))
-                                    Log.e(TAG, "deleteUser: "+"Couldn't delete cache");;
+                                    Log.e(TAG, "deleteUser: "+"Couldn't delete cache");
                             } catch (Exception e) { e.printStackTrace();}
+
+                            Toast.makeText(SettingsActivity.this, "Farewell", Toast.LENGTH_SHORT).show();
 
                             //Goto LoginActivity:
                             startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
-
                         }
                         else {
                             Toast.makeText(SettingsActivity.this, "Error. Please try again later", Toast.LENGTH_SHORT).show();

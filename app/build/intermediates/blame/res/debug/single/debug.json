@@ -20,10 +20,6 @@
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_message_white_48dp.xml"
     },
     {
-        "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_face_search.xml.flat",
-        "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\layout\\fragment_face_search.xml"
-    },
-    {
         "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -242,5 +238,9 @@
     {
         "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\layout_interest_list_row.xml.flat",
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\layout\\interest_list_row.xml"
+    },
+    {
+        "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_camera_alt_black_24dp.xml.flat",
+        "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_camera_alt_black_24dp.xml"
     }
 ]
