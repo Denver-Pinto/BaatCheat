@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Workspace\\college\\BTPPROJECT\\GITSTUFF\\BaatCheat-1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-2\\files-2.1\\f3d9fe582f5e9415c360ad4c82b1340e\\jetified-android-image-cropper-2.6.0\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\HellChranos1\\.gradle\\caches\\transforms-2\\files-2.1\\16ffed9d838e226fa8a7cdc7af37fe9b\\jetified-android-image-cropper-2.6.0\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

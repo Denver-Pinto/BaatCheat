@@ -1,4 +1,5 @@
 package com.baatcheat;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -31,6 +33,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -162,9 +165,7 @@ public class SettingsActivity extends AppCompatActivity {
         public void onClick(DialogInterface dialog, int which) {
             switch (which){
                 case DialogInterface.BUTTON_POSITIVE:
-                    deleteUserFromDatabase();
-                    deleteUserAccount();
-                    exitApplication();
+                    deleteUser();
                     break;
 
                 case DialogInterface.BUTTON_NEGATIVE:
@@ -174,10 +175,12 @@ public class SettingsActivity extends AppCompatActivity {
         }
     };
 
-    private void deleteUserFromDatabase(){
-
+    private void deleteUser(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
+
+        Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
+
         String userID = user.getUid();
 
         //FireStore:
@@ -187,28 +190,50 @@ public class SettingsActivity extends AppCompatActivity {
         //RealtimeDatabase:
         final DatabaseReference realtimeUserDatabase = FirebaseDatabase.getInstance().getReference().child("users");
         realtimeUserDatabase.child(userID).removeValue();
-    }
 
-    private void deleteUserAccount(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        assert user != null;
+        //Auth:
         user.delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "User account deleted.");
+
+                            //Delete Cache:
+                            try {
+                                File dir = SettingsActivity.this.getCacheDir();
+                                if(!deleteDir(dir))
+                                    Log.e(TAG, "deleteUser: "+"Couldn't delete cache");;
+                            } catch (Exception e) { e.printStackTrace();}
+
+                            //Goto LoginActivity:
+                            startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+
+                        }
+                        else {
+                            Toast.makeText(SettingsActivity.this, "Error. Please try again later", Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 });
     }
 
-    private void exitApplication(){
-        Intent exitApp = new Intent(Intent.ACTION_MAIN);
-        exitApp.addCategory(Intent.CATEGORY_HOME);
-        exitApp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(exitApp);
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            assert children != null;
+            for (String child : children) {
+                boolean success = deleteDir(new File(dir, child));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
     }
 
     public void deleteUserAccount(View view){

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Workspace\\college\\BTPPROJECT\\GITSTUFF\\BaatCheat-1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
+            "outputFile": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-2\\files-2.1\\e726b4e14e5f86c36a8713558e75d57f\\material-1.2.0-alpha06\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
+                    "source": "C:\\Users\\HellChranos1\\.gradle\\caches\\transforms-2\\files-2.1\\e726b4e14e5f86c36a8713558e75d57f\\material-1.2.0-alpha06\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

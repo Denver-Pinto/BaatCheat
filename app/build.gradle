@@ -3,7 +3,7 @@ apply plugin: 'com.google.gms.google-services' //For Firebase
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.baatcheat"
         minSdkVersion 23
@@ -22,30 +22,31 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'androidx.preference:preference:1.1.1'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //RecyclerVIew:
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     //Material Theme:
-    implementation "com.google.android.material:material:1.2.0-alpha06"
+    implementation "com.google.android.material:material:1.3.0-alpha02"
 
     //Firebase:
-    implementation 'com.google.firebase:firebase-analytics:17.3.0' //Analytics
-    implementation 'com.google.firebase:firebase-auth:19.3.0' //Authentication
-    implementation 'com.google.firebase:firebase-database:19.2.1' //Realtime Database
-    implementation 'com.google.firebase:firebase-firestore:21.4.2' //Cloud Firestore
-    implementation 'com.google.firebase:firebase-storage:19.1.1' //Storage
+    implementation 'com.google.firebase:firebase-analytics:17.5.0' //Analytics
+    implementation 'com.google.firebase:firebase-auth:19.4.0' //Authentication
+    implementation 'com.google.firebase:firebase-database:19.4.0' //Realtime Database
+    implementation 'com.google.firebase:firebase-firestore:21.6.0' //Cloud Firestore
+    implementation 'com.google.firebase:firebase-storage:19.2.0' //Storage
     implementation 'com.firebaseui:firebase-ui-storage:6.2.0' //UI-Storage
-    
+    implementation 'com.google.firebase:firebase-messaging:20.2.4' //Cloud Messaging
+
     //Google
-    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 
     //networking
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
