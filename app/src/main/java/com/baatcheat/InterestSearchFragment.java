@@ -652,7 +652,7 @@ public class InterestSearchFragment extends Fragment {
         result = new HashMap<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users")
+        db.collection("faceID")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -662,7 +662,7 @@ public class InterestSearchFragment extends Fragment {
                                 Log.d("TAG", document.getId() + " => " + document.getData());
                                 //Log.d("TAG",document.getString("name"));
                                 //Log.d("TAG",document.getData().get("faceid").toString());
-                                result.put(document.getString("name"),(List<Double>)document.getData().get("faceid"));
+                                result.put(document.getString("id"),(List<Double>)document.getData().get("faceid"));
                             }
                             Log.d("TAG","Processing Result");
                             processResult();
@@ -684,19 +684,23 @@ public class InterestSearchFragment extends Fragment {
             List<Double> id_list = ee.getValue();
             Log.d("TAG",id_list.toString());
             Double[] id = id_list.toArray(new Double[0]);
-            currentdistance = distancebetween(faceID,id);
+            currentdistance = distanceBetween(faceID,id);
             Log.d("distance",currentdistance.toString());
             Log.d("name",name);
             if(currentdistance < bestdistance){
                 bestdistance = currentdistance;
                 match = name;
+
             }
         }
-        // TODO: Do something with match.
-        Toast.makeText(getContext(), match, Toast.LENGTH_SHORT).show();
+
+        //Goto the profile of matched user
+        Intent toDisplayProfile = new Intent(getContext(), DisplayProfile.class);
+        toDisplayProfile.putExtra("UserID", match);
+        startActivity(toDisplayProfile);
     }
 
-    private double distancebetween(Double[] a, Double[] b){
+    private double distanceBetween(Double[] a, Double[] b){
         int i ;
         double sum =0;
         for(i =0;i<a.length;i++)
