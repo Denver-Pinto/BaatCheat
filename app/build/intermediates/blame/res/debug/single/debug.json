@@ -232,6 +232,10 @@
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_paths.xml.flat",
+        "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
         "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_condensed_regular.xml.flat",
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\font\\roboto_condensed_regular.xml"
     },

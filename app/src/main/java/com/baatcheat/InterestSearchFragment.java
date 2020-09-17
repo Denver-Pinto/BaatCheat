@@ -1,5 +1,6 @@
 package com.baatcheat;
 
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -98,6 +99,13 @@ public class InterestSearchFragment extends Fragment {
     private Map<String, List<Double>> result;
     private RequestQueue requestQueue;  // This is our requests queue to process our HTTP requests.
 
+    // Storage Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
     public InterestSearchFragment() {
         // Required empty public constructor
     }
@@ -173,6 +181,18 @@ public class InterestSearchFragment extends Fragment {
         scanPeople.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Check if we have write permission
+                int permission = ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+                if (permission != PackageManager.PERMISSION_GRANTED) {
+                    // We don't have permission so prompt the user
+                    ActivityCompat.requestPermissions(
+                            requireActivity(),
+                            PERMISSIONS_STORAGE,
+                            REQUEST_EXTERNAL_STORAGE
+                    );
+                }
+
                 takePicture();
             }
         });
@@ -378,11 +398,11 @@ public class InterestSearchFragment extends Fragment {
             try {
                 photoFile = createImageFile();
                 Uri photoURI = FileProvider.getUriForFile(requireContext(),
-                        "com.baatcheat.fileprovider",
+                        BuildConfig.APPLICATION_ID + ".fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-
+                Toast.makeText(getContext(), "Checkpoint 1", Toast.LENGTH_SHORT).show();
+                requireActivity().startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             } catch (IOException ex) {
                 // Error occurred while creating the File
                 Toast.makeText(getContext(),
@@ -413,7 +433,6 @@ public class InterestSearchFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode==REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-
             File imgFile = new  File(currentPhotoPath);
             if(imgFile.exists())            {
                 sourceBitmap=rotateBitmap(BitmapFactory.decodeFile(imgFile.getAbsolutePath()));
@@ -428,7 +447,6 @@ public class InterestSearchFragment extends Fragment {
                 faceDetection();
             }
         }
-
     }
 
     private void faceDetection() {

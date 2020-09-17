@@ -160,9 +160,6 @@ public class Homepage extends AppCompatActivity
         });
         mainNavigationView.setCheckedItem(R.id.homepage_menu_item);
 
-
-
-
         if(currentUser==null||currentUserId==null) {
             currentUser = getThisUser();//a temporary set of values until the user's actual details are retrieved
             currentUserId = getThisUserId();
@@ -290,5 +287,4 @@ public class Homepage extends AppCompatActivity
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 }

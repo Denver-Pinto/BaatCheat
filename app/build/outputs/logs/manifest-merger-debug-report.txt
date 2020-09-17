@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
 MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\964f10c2655890881d37865f61c7770f\navigation-ui-2.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\61be4cdffa668f0673b777164c1d0381\material-1.3.0-alpha02\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\6cfe3a23114bec2c72281fe5751a41b6\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -104,22 +104,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\HellChr
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\ed4a3fdb40e6e4083c6a185fac45c2cf\jetified-protolite-well-known-types-17.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\4b2a688450e451fa256efd5afdee3e92\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\c1f43154437029934a13294a85d957b6\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
 	package
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:1-77:12
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:2:11-69
@@ -152,21 +152,35 @@ ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifes
 	android:name
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.CAMERA
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:10:5-65
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:9:5-65
 MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:11:5-65
 MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:11:5-65
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:10:22-62
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:9:22-62
+uses-permission#android.permission.NETWORK_STATE
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:10:5-72
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:10:22-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:12:5-80
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:12:5-80
+MERGED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:12:22-77
 uses-feature#android.hardware.camera
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:12:5-60
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:14:5-60
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:12:19-57
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:14:19-57
 application
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:14:5-55:19
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:16:5-75:19
 MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\61be4cdffa668f0673b777164c1d0381\material-1.3.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha02] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\61be4cdffa668f0673b777164c1d0381\material-1.3.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\6cfe3a23114bec2c72281fe5751a41b6\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -250,87 +264,113 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\He
 MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\459f06fa92442be7187d3758506f37a0\jetified-gifdecoder-4.8.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\459f06fa92442be7187d3758506f37a0\jetified-gifdecoder-4.8.0\AndroidManifest.xml:9:5-20
 	android:requestLegacyExternalStorage
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:18:9-52
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:20:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\40251963d16cff20b50ae706a9c21dca\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:19:9-41
 	tools:ignore
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:22:9-48
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:24:9-48
 	android:roundIcon
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:21:9-54
 	tools:targetApi
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:23:9-28
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:25:9-28
 	android:icon
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:21:9-44
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:23:9-44
 	android:usesCleartextTraffic
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:24:9-44
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:26:9-44
 activity#com.baatcheat.DisplayProfile
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:25:9-61
-	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:25:19-49
-activity#com.baatcheat.BuildProfile
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:26:9-28:52
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:27:9-28:51
 	android:screenOrientation
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:28:13-49
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:27:13-41
-activity#com.baatcheat.SettingsActivity
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:29:9-32:52
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:27:19-49
+activity#com.baatcheat.BuildProfile
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:29:9-31:52
 	android:screenOrientation
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:32:13-49
-	android:label
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:31:13-60
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:31:13-49
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:30:13-45
-activity#com.baatcheat.MessagingActivity
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:33:9-35:52
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:30:13-41
+activity#com.baatcheat.SettingsActivity
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:32:9-35:52
 	android:screenOrientation
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:35:13-49
+	android:label
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:34:13-60
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:34:13-46
-activity#com.baatcheat.MessagingHomepage
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:33:13-45
+activity#com.baatcheat.MessagingActivity
 ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:36:9-38:52
 	android:screenOrientation
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:38:13-49
 	android:name
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:37:13-46
-activity#com.baatcheat.Homepage
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:39:9-42:52
+activity#com.baatcheat.MessagingHomepage
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:39:9-41:52
 	android:screenOrientation
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:42:13-49
-	android:noHistory
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:40:13-37
-activity#com.baatcheat.LoginActivity
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:43:9-50:20
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:40:13-46
+activity#com.baatcheat.Homepage
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:42:9-45:52
 	android:screenOrientation
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:45:13-49
+	android:noHistory
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:44:13-42
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:43:13-37
+activity#com.baatcheat.LoginActivity
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:46:9-53:20
+	android:screenOrientation
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:48:13-49
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:47:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:46:13-49:29
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:49:13-52:29
 action#android.intent.action.MAIN
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:47:17-69
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:50:17-69
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:47:25-66
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:50:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:48:17-77
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:48:27-74
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:51:27-74
 meta-data#preloaded_fonts
-ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:52:9-54:57
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:55:9-57:57
 	android:resource
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:54:13-54
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:57:13-54
 	android:name
-		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:53:13-43
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:56:13-43
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:59:9-61:36
+	android:value
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:61:13-33
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:60:13-70
+provider#androidx.core.content.FileProvider
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:63:9-74:20
+	android:grantUriPermissions
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:68:13-47
+	android:enabled
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:67:13-35
+	android:authorities
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:65:13-61
+	android:exported
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:66:13-37
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:64:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:70:13-72:54
+	android:resource
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:72:17-51
+	android:name
+		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:71:17-67
 uses-sdk
 INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
@@ -545,10 +585,6 @@ INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidMani
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 		ADDED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:12:5-80
-	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:12:22-77
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
 ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:18:9-21:47
 	android:screenOrientation
@@ -567,12 +603,6 @@ ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gra
 		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:26:13-37
 	android:name
 		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:24:13-79
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:28:13-30:54
-	android:resource
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:30:17-51
-	android:name
-		ADDED from [com.myhexaville:smart-image-picker:1.0.4] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\103a9ba2d023f81145b302c5572556b8\jetified-smart-image-picker-1.0.4\AndroidManifest.xml:29:17-67
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\HellChranos1\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
