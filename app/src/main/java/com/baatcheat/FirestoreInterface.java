@@ -48,6 +48,7 @@ class FirestoreInterface {
     //replace given list with list containing interest keywords
     void interestSearch(final List<String> userInterests, final MyCallBack myCallBack){
         FirebaseFirestore db= FirebaseFirestore.getInstance();
+        if(!currentUser.interests.isEmpty())
         db.collection("interest")
                 .whereArrayContainsAny("synonyms",userInterests)
                 .get()

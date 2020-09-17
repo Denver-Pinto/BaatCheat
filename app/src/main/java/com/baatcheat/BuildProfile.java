@@ -45,6 +45,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -214,15 +215,19 @@ public class BuildProfile extends AppCompatActivity {
                 Set<String> cardNameSet=new HashSet<>(cardNameToCard.keySet());
                 //debug test
                 StringBuilder z= new StringBuilder();
+                List<String> currentUserInterests=new ArrayList<String>();
                 for(String x:cardNameToCard.keySet()){
                     z.append(x).append(":");
                     Card currentCard=cardNameToCard.get(x);
                     assert currentCard != null;
                     for(Interest y:currentCard.getStoredInterests()){
                         z.append(y.getName()).append(",");
+                        currentUserInterests.add(y.getName());
+
                     }
                     z.append("\n");
                 }
+                currentUser.setInterests(currentUserInterests);
                 Log.d("MAIN3","All available cards are "+z.toString());
 
                 //

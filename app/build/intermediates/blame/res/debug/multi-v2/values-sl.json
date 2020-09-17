@@ -4,6 +4,23 @@
             "outputFile": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\HellChranos1\\.gradle\\caches\\transforms-2\\files-2.1\\964f10c2655890881d37865f61c7770f\\navigation-ui-2.3.0\\res\\values-sl\\values-sl.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,120",
+                        "endOffsets": "158,279"
+                    },
+                    "to": {
+                        "startLines": "50,51",
+                        "startColumns": "4,4",
+                        "startOffsets": "5825,5933",
+                        "endColumns": "107,120",
+                        "endOffsets": "5928,6049"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HellChranos1\\.gradle\\caches\\transforms-2\\files-2.1\\a2ae2e4c68641d37f5cd58b0396fbadb\\preference-1.1.1\\res\\values-sl\\values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
@@ -35,23 +52,6 @@
                         "startOffsets": "105,217,319,427,514,617,736,817,895,987,1081,1176,1270,1365,1459,1555,1655,1747,1839,1923,2031,2139,2239,2352,2460,2568,2751,6275",
                         "endColumns": "111,101,107,86,102,118,80,77,91,93,94,93,94,93,95,99,91,91,83,107,107,99,112,107,107,182,99,83",
                         "endOffsets": "212,314,422,509,612,731,812,890,982,1076,1171,1265,1360,1454,1550,1650,1742,1834,1918,2026,2134,2234,2347,2455,2563,2746,2846,6354"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HellChranos1\\.gradle\\caches\\transforms-2\\files-2.1\\bf9467d83927bc03752839aa958b7dd1\\navigation-ui-2.2.1\\res\\values-sl\\values-sl.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,163",
-                        "endColumns": "107,120",
-                        "endOffsets": "158,279"
-                    },
-                    "to": {
-                        "startLines": "50,51",
-                        "startColumns": "4,4",
-                        "startOffsets": "5825,5933",
-                        "endColumns": "107,120",
-                        "endOffsets": "5928,6049"
                     }
                 },
                 {

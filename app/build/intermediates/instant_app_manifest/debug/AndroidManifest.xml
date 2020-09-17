@@ -34,7 +34,9 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Base.MyTheme" >
+        android:testOnly="true"
+        android:theme="@style/Base.MyTheme"
+        android:usesCleartextTraffic="true" >
         <activity android:name="com.baatcheat.DisplayProfile" />
         <activity
             android:name="com.baatcheat.BuildProfile"

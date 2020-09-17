@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interest_search_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InterestSearchFragment">
@@ -63,7 +64,7 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_camera_alt_black_24dp"
-        app:layout_anchor="@id/build_profile_layout"
+        app:layout_anchor="@id/constraintLayout"
         app:layout_anchorGravity="bottom|right|end"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

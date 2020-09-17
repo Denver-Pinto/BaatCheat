@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Base.MyTheme"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:targetApi="q">
+        tools:targetApi="q"
+        android:usesCleartextTraffic="true">
         <activity android:name=".DisplayProfile"></activity>
         <activity
             android:name=".BuildProfile"

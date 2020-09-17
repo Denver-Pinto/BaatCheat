@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.baatcheat.model.User;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -113,7 +115,7 @@ public class InterestSearchFragment extends Fragment {
 
         final EditText searchBar= requireActivity().findViewById(R.id.searchBar);
         Button findPeople= requireActivity().findViewById(R.id.findPeople);
-        Button scanPeople = requireActivity().findViewById(R.id.scan_face_button);
+        FloatingActionButton scanPeople = requireActivity().findViewById(R.id.scan_face_button);
 
         //set up recycler:
         final RecyclerView currentRecycler=requireActivity().findViewById(R.id.availableUsers);
@@ -376,7 +378,7 @@ public class InterestSearchFragment extends Fragment {
             try {
                 photoFile = createImageFile();
                 Uri photoURI = FileProvider.getUriForFile(requireContext(),
-                        "com.example.android22.fileprovider",
+                        "com.baatcheat.fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
@@ -414,7 +416,7 @@ public class InterestSearchFragment extends Fragment {
 
             File imgFile = new  File(currentPhotoPath);
             if(imgFile.exists())            {
-                sourceBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                sourceBitmap=rotateBitmap(BitmapFactory.decodeFile(imgFile.getAbsolutePath()));
                 /*comment the next section out if you want to show pictures from camera*/
                 /*BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inMutable=true;
@@ -426,6 +428,7 @@ public class InterestSearchFragment extends Fragment {
                 faceDetection();
             }
         }
+
     }
 
     private void faceDetection() {
@@ -706,5 +709,13 @@ public class InterestSearchFragment extends Fragment {
         for(i =0;i<a.length;i++)
             sum = sum + Math.pow((b[i]-a[i]),2);
         return Math.sqrt(sum);
+    }
+
+    private Bitmap rotateBitmap(Bitmap original) {
+        Matrix matrix = new Matrix();
+        matrix.preRotate((float) 270);
+        Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
+        original.recycle();
+        return rotatedBitmap;
     }
 }

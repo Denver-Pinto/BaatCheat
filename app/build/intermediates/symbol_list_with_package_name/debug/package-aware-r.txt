@@ -406,6 +406,7 @@ attr drawableTint
 attr drawableTintMode
 attr drawableTopCompat
 attr drawerArrowStyle
+attr drawerLayoutStyle
 attr dropDownListViewStyle
 attr dropdownListPreferredItemHeight
 attr dropdownPreferenceStyle
@@ -703,6 +704,7 @@ attr maxVelocity
 attr maxWidth
 attr measureWithLargestChild
 attr menu
+attr mimeType
 attr min
 attr minHeight
 attr minHideDelay
@@ -1397,6 +1399,7 @@ dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen component_label_horizontal_margin
+dimen def_drawer_elevation
 dimen default_dimension
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
@@ -2098,6 +2101,7 @@ id image
 id incoming
 id info
 id interestName
+id interest_search_layout
 id interest_search_menu
 id invisible
 id italic
@@ -3623,6 +3627,7 @@ styleable CustomAttribute attributeName customBoolean customColorDrawableValue c
 styleable DialogFragmentNavigator android_name
 styleable DialogPreference android_dialogTitle android_dialogMessage android_dialogIcon android_positiveButtonText android_negativeButtonText android_dialogLayout dialogIcon dialogLayout dialogMessage dialogTitle negativeButtonText positiveButtonText
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable DrawerLayout elevation
 styleable EditTextPreference useSimpleSummaryProvider
 styleable ExtendedFloatingActionButton elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
@@ -3679,7 +3684,7 @@ styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velo
 styleable MultiSelectListPreference android_entries android_entryValues entries entryValues
 styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive
 styleable NavArgument android_name android_defaultValue argType nullable
-styleable NavDeepLink android_autoVerify uri
+styleable NavDeepLink android_autoVerify action mimeType uri
 styleable NavGraphNavigator startDestination
 styleable NavHost navGraph
 styleable NavHostFragment defaultNavHost
