@@ -402,7 +402,7 @@ public class InterestSearchFragment extends Fragment {
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 Toast.makeText(getContext(), "Checkpoint 1", Toast.LENGTH_SHORT).show();
-                requireActivity().startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             } catch (IOException ex) {
                 // Error occurred while creating the File
                 Toast.makeText(getContext(),
@@ -431,6 +431,8 @@ public class InterestSearchFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        Toast.makeText(requireContext(), "Checkpoint 3", Toast.LENGTH_SHORT).show();
 
         if (requestCode==REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             File imgFile = new  File(currentPhotoPath);
@@ -493,6 +495,7 @@ public class InterestSearchFragment extends Fragment {
             int pad =30;
             tempCanvas.drawRect(Math.max((int)x1-pad,0), Math.max((int)y1-pad,0),Math.min((int)x2+pad,sourceBitmap.getWidth()), Math.min((int)y2+pad,sourceBitmap.getHeight()), myRectPaint);
 
+            croppedBitmap = Bitmap.createBitmap(sourceBitmap, Math.max((int)x1-pad,0), Math.max((int)y1-pad,0),(int)Math.min(thisFace.getWidth()+2*pad,sourceBitmap.getWidth()-(int)x1+pad), (int)Math.min(thisFace.getHeight()+2*pad,sourceBitmap.getHeight()-(int)y1+pad));
             //convertedBitmap = Bitmap.createBitmap(croppedBitmap.getWidth(), croppedBitmap.getHeight(), Bitmap.Config.ARGB_8888);
             String s  = convertBitmapToString(croppedBitmap);
             bitmap2file(croppedBitmap);
@@ -538,8 +541,9 @@ public class InterestSearchFragment extends Fragment {
         {
             faceProcessing();
         }
+        else
+            Toast.makeText(requireContext(), "No Faces found", Toast.LENGTH_SHORT).show();
         faceDetector.release();
-
     }
 
     private void string2file(String sBody) {
@@ -663,7 +667,6 @@ public class InterestSearchFragment extends Fragment {
         } catch (JSONException e) {
             Log.e("Volley", "JSONArray to faceid conversion.");
             Toast.makeText(getContext(), "Error processing server response", Toast.LENGTH_SHORT).show();
-
         }
         getMatch();
         //addPredictionText(Arrays.toString(faceID));
@@ -716,7 +719,7 @@ public class InterestSearchFragment extends Fragment {
         }
 
         //Goto the profile of matched user
-        Intent toDisplayProfile = new Intent(getContext(), DisplayProfile.class);
+        Intent toDisplayProfile = new Intent(requireContext(), DisplayProfile.class);
         toDisplayProfile.putExtra("UserID", match);
         startActivity(toDisplayProfile);
     }
@@ -735,5 +738,10 @@ public class InterestSearchFragment extends Fragment {
         Bitmap rotatedBitmap = Bitmap.createBitmap(original, 0, 0, original.getWidth(), original.getHeight(), matrix, true);
         original.recycle();
         return rotatedBitmap;
+    }
+
+    @Override
+    public void onSaveInstanceState(@NotNull Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }

@@ -41,7 +41,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Homepage"
-            android:noHistory="true"
+            android:noHistory="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"

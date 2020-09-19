@@ -110,8 +110,8 @@
 57-->E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:42:9-45:52
 58            android:name="com.baatcheat.Homepage"
 58-->E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:43:13-37
-59            android:noHistory="true"
-59-->E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:44:13-37
+59            android:noHistory="false"
+59-->E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:44:13-38
 60            android:screenOrientation="portrait" />
 60-->E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\AndroidManifest.xml:45:13-49
 61        <activity

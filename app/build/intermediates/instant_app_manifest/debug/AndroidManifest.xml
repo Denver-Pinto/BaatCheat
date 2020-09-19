@@ -57,7 +57,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.baatcheat.Homepage"
-            android:noHistory="true"
+            android:noHistory="false"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.baatcheat.LoginActivity"
