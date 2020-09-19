@@ -226,14 +226,6 @@
                 android:layout_gravity="center_horizontal"
                 android:visibility="gone"/>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/common_google_signin_btn_icon_dark_normal"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/google_sign_in"
-                android:onClick="googleSignIn"/>
-
         </LinearLayout>
 
     </ScrollView>

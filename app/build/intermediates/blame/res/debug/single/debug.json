@@ -36,12 +36,12 @@
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_white_48dp.xml.flat",
-        "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_home_white_48dp.xml"
-    },
-    {
         "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search_black_24dp.xml.flat",
         "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_white_48dp.xml.flat",
+        "source": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\src\\main\\res\\drawable\\ic_home_white_48dp.xml"
     },
     {
         "merged": "E:\\Workspace\\BaatCheat\\Codebase\\BaatCheat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_btn_google_dark.png.flat",

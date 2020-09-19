@@ -6670,7 +6670,7 @@
     </style><style name="Widget.MyApp.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">?attr/colorAccent</item>
         <item name="android:theme">@style/Base.MyTheme</item>
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
     </style><style name="myDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">true</item>
     </style></file><file path="E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\res\values\themes.xml" qualifiers=""><style name="Base.MyTheme" parent="Base.MaterialThemeBuilder">
@@ -6716,7 +6716,7 @@
         <item name="floatingActionButtonStyle">@style/Widget.MyApp.FAB</item>
         <item name="textInputStyle">@style/Widget.MyApp.TextInputLayout</item>
         <item name="materialButtonStyle">@style/Widget.MyApp.Button</item>
-    </style><style name="Base.MaterialThemeBuilder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style><style name="Base.MaterialThemeBuilder" parent="Theme.MaterialComponents.NoActionBar">
         <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
         <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
         <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
@@ -6730,6 +6730,7 @@
         
         <item name="colorPrimaryDark">?colorPrimaryVariant</item>
         <item name="colorAccent">?colorSecondary</item>
+
     </style></file><file path="E:\Workspace\BaatCheat\Codebase\BaatCheat\app\src\main\res\values\type.xml" qualifiers=""><style name="TextAppearance.MyTheme.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
       <item name="fontFamily">@font/lobster_two</item>
       <item name="android:fontFamily">@font/lobster_two</item>

@@ -2,6 +2,23 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <style name="Base.MaterialThemeBuilder" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
+        <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
+        <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
+
+        <item name="android:statusBarColor">#000</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">?android:colorPrimary</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">?colorControlHighlight</item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
+        <item name="colorAccent">?colorSecondary</item>
+
+    </style>
+
     <!--Base custom theme-->
     <style name="Base.MyTheme" parent="Base.MaterialThemeBuilder">
         <!--Material color attributes -->
@@ -46,22 +63,6 @@
         <item name="floatingActionButtonStyle">@style/Widget.MyApp.FAB</item>
         <item name="textInputStyle">@style/Widget.MyApp.TextInputLayout</item>
         <item name="materialButtonStyle">@style/Widget.MyApp.Button</item>
-    </style>
-
-    <style name="Base.MaterialThemeBuilder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
-        <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
-        <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
-
-        <item name="android:statusBarColor">#000</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:navigationBarColor">?android:colorPrimary</item>
-        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
-        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">?colorControlHighlight</item>
-
-        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
-        <item name="colorAccent">?colorSecondary</item>
     </style>
 
 </resources>
