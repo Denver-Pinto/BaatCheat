@@ -197,13 +197,14 @@ class FirestoreInterface {
                     }
                 });
     }
-//updating user on the database
+
+    //updating user on the database
     public  void  updateUser(User u){
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
                 .document(u.getUserID())
-                .set(u)
+                .set(u.convertToMap())
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
