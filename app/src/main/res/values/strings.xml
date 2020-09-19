@@ -81,4 +81,6 @@
     <string name="make_invisible">make Invisible</string>
     <string name="user">User</string>
     <string name="topic">Topic</string>
+    <string name="face_recognition">Face Recognition</string>
+    <string name="add_sample">Add Sample</string>
 </resources>

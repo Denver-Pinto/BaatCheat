@@ -401,7 +401,6 @@ public class InterestSearchFragment extends Fragment {
                         BuildConfig.APPLICATION_ID + ".fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                Toast.makeText(getContext(), "Checkpoint 1", Toast.LENGTH_SHORT).show();
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             } catch (IOException ex) {
                 // Error occurred while creating the File
@@ -431,8 +430,6 @@ public class InterestSearchFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        Toast.makeText(requireContext(), "Checkpoint 3", Toast.LENGTH_SHORT).show();
 
         if (requestCode==REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             File imgFile = new  File(currentPhotoPath);
@@ -597,8 +594,7 @@ public class InterestSearchFragment extends Fragment {
     }
 
     private void faceProcessing() {
-        //setPredictionText("Recognizing faces...");
-        Toast.makeText(getContext(), "Recognising Text", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Recognising.. ", Toast.LENGTH_SHORT).show();
         Face thisFace = faces.valueAt(0);
         float x1 = thisFace.getPosition().x;
         float y1 = thisFace.getPosition().y;
@@ -623,23 +619,23 @@ public class InterestSearchFragment extends Fragment {
         }
 
         JsonObjectRequest arrReq = new JsonObjectRequest
-                (Request.Method.POST, BASE_URL, instance, new Response.Listener<JSONObject>()  {
+            (Request.Method.POST, BASE_URL, instance, new Response.Listener<JSONObject>()  {
                     @Override
                     public void onResponse(JSONObject response) {
                         setPredictionTextResponse(response);
                     }
                 },
 
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                // If there a HTTP error then add a note to our repo list.
-                                //setPredictionText("Error while calling REST API");
-                                Toast.makeText(getContext(), "Error while calling REST API", Toast.LENGTH_SHORT).show();
-                                Log.e("Volley", error.toString());
-                            }
-                        }
-                );
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // If there a HTTP error then add a note to our repo list.
+                        //setPredictionText("Error while calling REST API");
+                        Toast.makeText(getContext(), "Error while calling REST API", Toast.LENGTH_SHORT).show();
+                        Log.e("Volley", error.toString());
+                    }
+                }
+            );
         requestQueue.add(arrReq);// Add the request we just defined to our request queue.
     }
 
@@ -676,7 +672,7 @@ public class InterestSearchFragment extends Fragment {
         result = new HashMap<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("faceID")
+        db.collection("faceid")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -686,7 +682,7 @@ public class InterestSearchFragment extends Fragment {
                                 Log.d("TAG", document.getId() + " => " + document.getData());
                                 //Log.d("TAG",document.getString("name"));
                                 //Log.d("TAG",document.getData().get("faceid").toString());
-                                result.put(document.getString("id"),(List<Double>)document.getData().get("faceid"));
+                                result.put(document.getString("name"),(List<Double>)document.getData().get("faceid"));
                             }
                             Log.d("TAG","Processing Result");
                             processResult();
@@ -704,17 +700,16 @@ public class InterestSearchFragment extends Fragment {
         String match = "";
         for(Map.Entry<String, List<Double>> ee : result.entrySet()) {
             String name = ee.getKey();
-            Log.d("TAG",name);
+            Log.d("TAG",".."+name);
             List<Double> id_list = ee.getValue();
             Log.d("TAG",id_list.toString());
             Double[] id = id_list.toArray(new Double[0]);
             currentdistance = distanceBetween(faceID,id);
             Log.d("distance",currentdistance.toString());
-            Log.d("name",name);
+            Log.d("name"," "+name);
             if(currentdistance < bestdistance){
                 bestdistance = currentdistance;
                 match = name;
-
             }
         }
 

@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:scrollbars="none"
         android:layout_weight="1">
+
         <LinearLayout
             android:id="@+id/build_profile_layout"
             android:layout_width="fill_parent"
@@ -103,6 +104,24 @@
                         android:text="store cards"/>
                 </TableRow>
             </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/color_on_background"
+                android:layout_height="wrap_content"
+                android:text="@string/face_recognition"
+                style="@style/TextAppearance.MyTheme.Headline4"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addSample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/Widget.MyApp.Button"
+                android:text="@string/add_sample"
+                android:onClick="addFaceSample"/>
+
         </LinearLayout>
     </ScrollView>
 

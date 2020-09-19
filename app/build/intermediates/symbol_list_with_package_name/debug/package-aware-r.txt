@@ -1945,6 +1945,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addSample
 id add_card_button
 id adjust_height
 id adjust_width
@@ -2612,6 +2613,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_sample
 string app_logo
 string app_name
 string appbar_scrolling_view_behavior
@@ -2676,6 +2678,7 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string face_recognition
 string face_search
 string fcm_fallback_notification_channel_label
 string firebase_database_url
