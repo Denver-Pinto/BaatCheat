@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.baatcheat.model.User;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -160,9 +161,6 @@ public class Homepage extends AppCompatActivity
         });
         mainNavigationView.setCheckedItem(R.id.homepage_menu_item);
 
-
-
-
         if(currentUser==null||currentUserId==null) {
             currentUser = getThisUser();//a temporary set of values until the user's actual details are retrieved
             currentUserId = getThisUserId();
@@ -243,9 +241,6 @@ public class Homepage extends AppCompatActivity
             case R.id.interest_search_menu:
                 selectedFragment = new InterestSearchFragment();
                 break;
-            case R.id.face_search_menu:
-                selectedFragment = new FaceSearchFragment();
-                break;
         }
 
         if(selectedFragment!=null)
@@ -287,5 +282,10 @@ public class Homepage extends AppCompatActivity
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

@@ -14,10 +14,4 @@
         android:title="@string/interest_search"
         app:labelVisibilityMode="unlabeled"/>
 
-    <item
-        android:id="@+id/face_search_menu"
-        android:icon="@drawable/ic_face_scan"
-        android:title="@string/face_search"
-        app:labelVisibilityMode="unlabeled"/>
-
 </menu>

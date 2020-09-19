@@ -5,9 +5,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -20,8 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/Base.MyTheme"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:targetApi="q">
-        <activity android:name=".DisplayProfile"></activity>
+        tools:targetApi="q"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".DisplayProfile"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BuildProfile"
             android:screenOrientation="portrait" />
@@ -37,7 +41,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Homepage"
-            android:noHistory="true"
+            android:noHistory="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"
@@ -51,6 +55,23 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.baatcheat.fileprovider"
+            android:exported="false"
+            android:enabled="true"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
     </application>
 
 </manifest>
