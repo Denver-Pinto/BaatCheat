@@ -2,13 +2,11 @@ package com.baatcheat;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.Build;
 import android.util.Log;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 
 import com.baatcheat.model.Card;
 import com.baatcheat.model.Interest;
@@ -107,7 +105,6 @@ class FirestoreInterface {
                     }
                 });
     }
-
 
     //searching properly within interests
     void searchForSynonyms(final String[] topicAndSynonyms, final String cardName, final String userId, final User u){
@@ -291,6 +288,16 @@ class FirestoreInterface {
             String x=i.toLowerCase();
             lowerCaseInterests.add(x);
         }
+        if(lowerCaseInterests.size()>10){
+
+            List<String>actualSearchInterests=new ArrayList<>();
+            for(int i=0;i<10;i++){
+                actualSearchInterests.add(lowerCaseInterests.get(i));
+            }
+            lowerCaseInterests.clear();
+            lowerCaseInterests=actualSearchInterests;
+        }
+
         Log.d(TAG,"lowercase interests are "+lowerCaseInterests.toString());
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -342,6 +349,16 @@ class FirestoreInterface {
             String x=i.toLowerCase();
             lowerCaseInterests.add(x);
         }
+
+        if(lowerCaseInterests.size()>10){
+            List<String>actualSearchInterests=new ArrayList<>();
+            for(int i=0;i<10;i++){
+                actualSearchInterests.add(lowerCaseInterests.get(i));
+            }
+            lowerCaseInterests.clear();
+            lowerCaseInterests=actualSearchInterests;
+        }
+
         Log.d(TAG,"lowercase interests are "+lowerCaseInterests.toString());
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();

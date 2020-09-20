@@ -122,11 +122,12 @@ public class BuildProfile extends AppCompatActivity {
     private Map<String, List<Double>> result;
     private RequestQueue requestQueue;  // This is our requests queue to process our HTTP requests.
 
-    // Storage Permissions
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
+    //Permissions
+    private static final int REQUEST_PERMISSIONS = 1;
+    private static final String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
     };
 
     @Override
@@ -531,17 +532,29 @@ public class BuildProfile extends AppCompatActivity {
         // This setups up a new request queue which we will need to make HTTP requests.
         requestQueue = Volley.newRequestQueue(this);
 
-        // Check if we have write permission
-        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permission != PackageManager.PERMISSION_GRANTED) {
+        // Check if we have permissions
+        int storagePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int cameraPermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+
+        if (storagePermission != PackageManager.PERMISSION_GRANTED
+                || cameraPermission != PackageManager.PERMISSION_GRANTED) {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     this,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
+                    PERMISSIONS,
+                    REQUEST_PERMISSIONS
             );
+
+            //Ignore the warning:
+            //Check again:
+            if (storagePermission != PackageManager.PERMISSION_GRANTED
+                    || cameraPermission != PackageManager.PERMISSION_GRANTED)
+                Toast.makeText(this, "Face Recognition wouldn't work", Toast.LENGTH_SHORT).show();
+            else
+                takePicture();
         }
-        takePicture();
+        else
+            takePicture();
         requestQueue = Volley.newRequestQueue(this);  // This setups up a new request queue which we will need to make HTTP requests.
     }
 

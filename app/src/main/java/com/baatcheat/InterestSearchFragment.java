@@ -1,6 +1,7 @@
 package com.baatcheat;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -99,11 +100,12 @@ public class InterestSearchFragment extends Fragment {
     private Map<String, List<Double>> result;
     private RequestQueue requestQueue;  // This is our requests queue to process our HTTP requests.
 
-    // Storage Permissions
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
+    //Permissions
+    private static final int REQUEST_PERMISSIONS = 1;
+    private static final String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
     };
 
     public InterestSearchFragment() {
@@ -181,19 +183,29 @@ public class InterestSearchFragment extends Fragment {
         scanPeople.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if we have write permission
-                int permission = ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                // Check if we have permissions
+                int storagePermission = ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                int cameraPermission = ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA);
 
-                if (permission != PackageManager.PERMISSION_GRANTED) {
+                if (storagePermission != PackageManager.PERMISSION_GRANTED
+                    || cameraPermission != PackageManager.PERMISSION_GRANTED) {
                     // We don't have permission so prompt the user
                     ActivityCompat.requestPermissions(
                             requireActivity(),
-                            PERMISSIONS_STORAGE,
-                            REQUEST_EXTERNAL_STORAGE
+                            PERMISSIONS,
+                            REQUEST_PERMISSIONS
                     );
-                }
 
-                takePicture();
+                    //Ignore the warning:
+                    //Check again:
+                    if (storagePermission != PackageManager.PERMISSION_GRANTED
+                            || cameraPermission != PackageManager.PERMISSION_GRANTED)
+                        Toast.makeText(requireContext(), "Face Recognition wouldn't work", Toast.LENGTH_SHORT).show();
+                    else
+                        takePicture();
+                }
+                else
+                    takePicture();
             }
         });
 
